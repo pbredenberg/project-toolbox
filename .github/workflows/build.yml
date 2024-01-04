@@ -32,6 +32,8 @@ jobs:
         run: npm test
       - name: build
         run: npm run build
+      - name: projen
+        run: npx projen
       - name: Find mutations
         id: self_mutation
         run: |-

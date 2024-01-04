@@ -87,6 +87,14 @@ githubBuildWorkflow?.patch(
       run: 'npm test',
    }),
 );
+// Put this after the build to detect if someone changed any of the projen config.
+// That would be naughty.
+githubBuildWorkflow?.patch(
+   JsonPatch.add('/jobs/build/steps/6', {
+      name: 'projen',
+      run: 'npx projen',
+   }),
+);
 
 project.addGitIgnore('!/package-lock.json');
 
