@@ -8,8 +8,10 @@
 /.github/workflows/release.yml linguist-generated
 /.gitignore linguist-generated
 /.markdownlint.json linguist-generated
+/.mocha.opts linguist-generated
 /.npmignore linguist-generated
 /.nvmrc linguist-generated
+/.nycrc.json linguist-generated
 /.prettierignore linguist-generated
 /.prettierrc.json linguist-generated
 /.projen/** linguist-generated
@@ -22,5 +24,6 @@
 /src/tsconfig.commonjs.json linguist-generated
 /src/tsconfig.esm.json linguist-generated
 /src/tsconfig.types.json linguist-generated
+/test/tsconfig.json linguist-generated
 /tsconfig.dev.json linguist-generated
 /tsconfig.json linguist-generated

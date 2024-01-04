@@ -7,8 +7,10 @@
     ".github/workflows/pull-request-lint.yml",
     ".gitignore",
     ".markdownlint.json",
+    ".mocha.opts",
     ".npmignore",
     ".nvmrc",
+    ".nycrc.json",
     ".prettierignore",
     ".prettierrc.json",
     ".projen/deps.json",
@@ -18,6 +20,7 @@
     "src/tsconfig.commonjs.json",
     "src/tsconfig.esm.json",
     "src/tsconfig.types.json",
+    "test/tsconfig.json",
     "tsconfig.dev.json",
     "tsconfig.json"
   ],

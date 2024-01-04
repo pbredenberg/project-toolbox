@@ -81,6 +81,12 @@ githubBuildWorkflow?.patch(
       run: 'npm run standards',
    }),
 );
+githubBuildWorkflow?.patch(
+   JsonPatch.add('/jobs/build/steps/4', {
+      name: 'test',
+      run: 'npm test',
+   }),
+);
 
 project.addGitIgnore('!/package-lock.json');
 
@@ -104,7 +110,7 @@ project.addScripts({
    'build:types': 'tsc -p src/tsconfig.types.json --pretty',
    'build:standards': 'tsc -p tsconfig.json --pretty',
    'test:node-version': 'check-node-version --npm 8.5.5 --print',
-   test: "npm run test:node-version && TS_NODE_PROJECT='tests/tsconfig.json' TS_NODE_FILES=true nyc mocha --opts ./.mocha.opts",
+   test: "npm run test:node-version && TS_NODE_PROJECT='test/tsconfig.json' TS_NODE_FILES=true nyc mocha --opts ./.mocha.opts",
    eslint: "eslint '{,!(node_modules|dist)/**/}*.{js,ts}'",
    markdownlint:
       "markdownlint -c .markdownlint.json -i CHANGELOG.md '{,!(node_modules)/**/}*.md'",
@@ -116,6 +122,51 @@ project.addScripts({
       'node ./node_modules/@silvermine/standardization/scripts/release.js prep-changelog',
    'release:finalize':
       'node ./node_modules/@silvermine/standardization/scripts/release.js finalize',
+});
+
+new TextFile(project, '.mocha.opts', {
+   lines: [
+      '--require source-map-support/register',
+      '--require ./test/setup/before.ts',
+      '--full-trace',
+      '--bail',
+      'test/**/*.test.ts',
+   ],
+});
+
+new TextFile(project, '.nycrc.json', {
+   lines: [
+      '{',
+      '   "include": [',
+      '      "src/**/*.{ts,js}"',
+      '   ],',
+      '   "exclude": [',
+      '      "**/*.d.ts"',
+      '   ],',
+      '   "extension": [',
+      '      ".ts",',
+      '      ".js"',
+      '   ],',
+      '   "require": [',
+      '      "ts-node/register"',
+      '   ],',
+      '   "reporter": [',
+      '      "text-summary",',
+      '      "html",',
+      '      "lcov"',
+      '   ],',
+      '   "sourceMap": true,',
+      '   "all": true',
+      '}',
+   ],
+});
+
+new TextFile(project, 'test/tsconfig.json', {
+   lines: [
+      '{',
+      '   "extends": "@silvermine/typescript-config/tsconfig.json"',
+      '}',
+   ],
 });
 
 new TextFile(project, '.nvmrc', {

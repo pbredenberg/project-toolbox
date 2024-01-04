@@ -13,7 +13,7 @@
     "post-compile": "npx projen post-compile",
     "pre-compile": "npx projen pre-compile",
     "release": "npx projen release",
-    "test": "npm run test:node-version && TS_NODE_PROJECT='tests/tsconfig.json' TS_NODE_FILES=true nyc mocha --opts ./.mocha.opts",
+    "test": "npm run test:node-version && TS_NODE_PROJECT='test/tsconfig.json' TS_NODE_FILES=true nyc mocha --opts ./.mocha.opts",
     "unbump": "npx projen unbump",
     "watch": "npx projen watch",
     "projen": "npx projen",

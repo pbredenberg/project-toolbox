@@ -46,6 +46,9 @@ jspm_packages/
 /dist/
 !/package-lock.json
 !/.eslintrc.json
+!/.mocha.opts
+!/.nycrc.json
+!/test/tsconfig.json
 !/.nvmrc
 !/.markdownlint.json
 !/src/tsconfig.commonjs.json
