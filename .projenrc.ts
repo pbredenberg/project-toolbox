@@ -35,7 +35,7 @@ const devDependencies = [
    '@silvermine/eslint-config@git+https://github.com/silvermine/eslint-config-silvermine#fa9925f9de6b8139d42781dbd002b4024318744a',
    '@silvermine/eslint-plugin-silvermine@2.4.0',
    '@silvermine/standardization@2.0.0',
-   '@silvermine/typescript-config@1.0.0',
+   '@silvermine/typescript-config@git+https://github.com/silvermine/typescript-config#23213e33077089e723629dead5342abe6f3b3c8c',
    '@types/chai@4.1.7',
    '@types/mocha@5.2.5',
    '@types/node@12.20.45',
@@ -126,6 +126,39 @@ new TextFile(project, '.markdownlint.json', {
    lines: [
       '{',
       '   "extends": "./node_modules/@silvermine/standardization/.markdownlint.json"',
+      '}',
+   ],
+});
+
+new TextFile(project, 'src/tsconfig.commonjs.json', {
+   lines: [
+      '{',
+      '   "extends": "@silvermine/typescript-config/tsconfig.commonjs.json",',
+      '   "compilerOptions": {',
+      '      "outDir": "../dist/commonjs/"',
+      '   }',
+      '}',
+   ],
+});
+
+new TextFile(project, 'src/tsconfig.esm.json', {
+   lines: [
+      '{',
+      '   "extends": "@silvermine/typescript-config/tsconfig.esm.json",',
+      '   "compilerOptions": {',
+      '      "outDir": "../dist/esm/"',
+      '   }',
+      '}',
+   ],
+});
+
+new TextFile(project, 'src/tsconfig.types.json', {
+   lines: [
+      '{',
+      '   "extends": "@silvermine/typescript-config/tsconfig.types.json",',
+      '   "compilerOptions": {',
+      '      "outDir": "../dist/types/"',
+      '   }',
       '}',
    ],
 });

@@ -15,6 +15,9 @@
     ".projen/files.json",
     ".projen/tasks.json",
     "LICENSE",
+    "src/tsconfig.commonjs.json",
+    "src/tsconfig.esm.json",
+    "src/tsconfig.types.json",
     "tsconfig.dev.json",
     "tsconfig.json"
   ],

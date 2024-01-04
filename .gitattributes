@@ -19,5 +19,8 @@
 /LICENSE linguist-generated
 /package-lock.json linguist-generated
 /package.json linguist-generated
+/src/tsconfig.commonjs.json linguist-generated
+/src/tsconfig.esm.json linguist-generated
+/src/tsconfig.types.json linguist-generated
 /tsconfig.dev.json linguist-generated
 /tsconfig.json linguist-generated

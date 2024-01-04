@@ -48,3 +48,6 @@ jspm_packages/
 !/.eslintrc.json
 !/.nvmrc
 !/.markdownlint.json
+!/src/tsconfig.commonjs.json
+!/src/tsconfig.esm.json
+!/src/tsconfig.types.json
