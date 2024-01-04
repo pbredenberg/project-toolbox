@@ -1,5 +1,6 @@
+import { expect } from 'chai';
 import { Hello } from '../src';
 
-test('hello', () => {
-  expect(new Hello().sayHello()).toBe('hello, world!');
+describe('hello', () => {
+   expect(new Hello().sayHello()).to.be('hello, world!');
 });

@@ -1,27 +1,82 @@
 {
   "dependencies": [
     {
-      "name": "@types/jest",
+      "name": "@silvermine/chai-strictly-equal",
+      "version": "1.1.0",
+      "type": "build"
+    },
+    {
+      "name": "@silvermine/eslint-config",
+      "version": "git+https://github.com/silvermine/eslint-config-silvermine#fa9925f9de6b8139d42781dbd002b4024318744a",
+      "type": "build"
+    },
+    {
+      "name": "@silvermine/eslint-plugin-silvermine",
+      "version": "2.4.0",
+      "type": "build"
+    },
+    {
+      "name": "@silvermine/standardization",
+      "version": "2.0.0",
+      "type": "build"
+    },
+    {
+      "name": "@silvermine/typescript-config",
+      "version": "1.0.0",
+      "type": "build"
+    },
+    {
+      "name": "@types/chai",
+      "version": "4.1.7",
+      "type": "build"
+    },
+    {
+      "name": "@types/mocha",
+      "version": "5.2.5",
       "type": "build"
     },
     {
       "name": "@types/node",
-      "version": "^18",
+      "version": "12.20.45",
+      "type": "build"
+    },
+    {
+      "name": "@types/sinon",
+      "version": "5.0.5",
       "type": "build"
     },
     {
       "name": "@typescript-eslint/eslint-plugin",
-      "version": "^6",
+      "version": "5.17.0",
       "type": "build"
     },
     {
       "name": "@typescript-eslint/parser",
-      "version": "^6",
+      "version": "5.17.0",
+      "type": "build"
+    },
+    {
+      "name": "chai",
+      "version": "4.2.0",
+      "type": "build"
+    },
+    {
+      "name": "check-node-version",
+      "version": "4.0.2",
       "type": "build"
     },
     {
       "name": "constructs",
       "version": "^10.0.0",
+      "type": "build"
+    },
+    {
+      "name": "coveralls",
+      "version": "3.0.9",
+      "type": "build"
+    },
+    {
+      "name": "eslint-config-prettier",
       "type": "build"
     },
     {
@@ -33,21 +88,40 @@
       "type": "build"
     },
     {
+      "name": "eslint-plugin-prettier",
+      "type": "build"
+    },
+    {
       "name": "eslint",
-      "version": "^8",
+      "version": "8.16.0",
       "type": "build"
     },
     {
-      "name": "jest",
+      "name": "mocha",
+      "version": "5.2.0",
       "type": "build"
     },
     {
-      "name": "jest-junit",
-      "version": "^15",
+      "name": "nyc",
+      "version": "13.1.0",
+      "type": "build"
+    },
+    {
+      "name": "prettier",
       "type": "build"
     },
     {
       "name": "projen",
+      "type": "build"
+    },
+    {
+      "name": "sinon",
+      "version": "5.1.1",
+      "type": "build"
+    },
+    {
+      "name": "source-map-support",
+      "version": "0.5.16",
       "type": "build"
     },
     {
@@ -56,15 +130,18 @@
       "type": "build"
     },
     {
-      "name": "ts-jest",
+      "name": "ts-node",
+      "version": "7.0.1",
       "type": "build"
     },
     {
-      "name": "ts-node",
+      "name": "tslib",
+      "version": "1.9.3",
       "type": "build"
     },
     {
       "name": "typescript",
+      "version": "3.9.5",
       "type": "build"
     }
   ],
